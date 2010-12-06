@@ -9,7 +9,7 @@ decompress it:
 tar zxvf implement.tar.gz
 }}}
 
-= Isolate failure-inducing changes =
+== Isolate failure-inducing changes ==
 Go to directory 'find/experiments' and just type:
 {{{
 python dd.py
