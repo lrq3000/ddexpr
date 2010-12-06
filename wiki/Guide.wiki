@@ -1,3 +1,4 @@
+#labels Featured,Phase-Deploy
 A step-by-step guidance to apply delta debugging to isolate failure-inducing changes of regressions.
 
 == Prepare a worked program P, a broken program P' and a test input ==
