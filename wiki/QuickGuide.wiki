@@ -1,7 +1,7 @@
 #A quick guide to use implement.tar.gz
 
 
-== Download and Decompression==
+== Download and decompression==
 Download [http://ddexpr.googlecode.com/files/implement.tar.gz implement.tar.gz] and 
 decompress it:
 
