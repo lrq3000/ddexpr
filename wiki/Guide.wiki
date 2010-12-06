@@ -12,7 +12,7 @@ link
 find: link: Too many levels of symbolic links 
 }}}
 
-He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15 and findutils-4.2.18 were used in this experiment.
+He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15 and findutils-4.2.18 were used in this experiment. Both releases can be downloaded from ftp ([http://ftp.gnu.org/gnu/findutils/]).
 
 
 = Details =
