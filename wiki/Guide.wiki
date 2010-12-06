@@ -1,6 +1,6 @@
 A step-by-step guidance to apply delta debugging to isolate failure-inducing changes of regressions.
 
-= Prepare programs and a test input =
+= Prepare a worked program P, a broken program P' and a test input =
 
 A user reported a bug of findutils-4.2.18 on Savannah ([http://savannah.gnu.org/bugs/?12181]). The steps to reproduce the failure were also given:
 {{{
