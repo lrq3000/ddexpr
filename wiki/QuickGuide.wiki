@@ -3,26 +3,15 @@
 
 == Download and Decompression==
 Download [http://ddexpr.googlecode.com/files/implement.tar.gz implement.tar.gz] and 
-decompress it.
+decompress it:
 
 {{{
 tar zxvf implement.tar.gz
 }}}
-
-{{{
-def fib(n):
-  if n == 0 or n == 1:
-    return n
-  else:
-    # This recursion is not good for large numbers.
-    return fib(n-1) + fib(n-2)
-}}}
-
-
 
 = Isolate failure-inducing changes =
 Go to directory 'find/experiments' and just type:
 {{{
 python dd.py
 }}}
-After several minutes, the failure-inducing change is identified and stored in a file named isolated.
+After several minutes, the failure-inducing change is identified and stored in a file named `isolated`.
