@@ -1,6 +1,6 @@
 A step-by-step guidance to apply delta debugging to isolate failure-inducing changes of regressions.
 
-= Prepare a worked program P, a broken program P' and a test input =
+== Prepare a worked program P, a broken program P' and a test input ==
 
 A user reported a bug of findutils-4.2.18 on Savannah ([http://savannah.gnu.org/bugs/?12181]). The steps to reproduce the failure were also given:
 {{{
@@ -12,7 +12,7 @@ link
 find: link: Too many levels of symbolic links 
 }}}
 
-He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15 and findutils-4.2.18 were used in this experiment. Both releases can be downloaded from ftp ([http://ftp.gnu.org/gnu/findutils/]).
+He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. Both releases can be downloaded from ftp ([http://ftp.gnu.org/gnu/findutils/]).
 
 
 = Details =
