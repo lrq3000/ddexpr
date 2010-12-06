@@ -19,5 +19,8 @@ He mentioned that the bug was not observed with findutils-4.2.15. Therefore, fin
 == Determine relevant files and directories ==
 
 There were eight directories in the package. Only changes in files of `/src/`, `/gnulib/` and `/lib/` were failure-relevant.
-Thus, the number of changed lines to be considered was narrowed down from 11,251 to 4172 ones between
-both entire releases.
+
+== Check and guarantee configuration consistency between P and P’==
+
+After further examinations of files in these three directories, we find the file lists in ‘/src/’ were the same. Moreover, we find the directory
+`/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
