@@ -30,3 +30,10 @@ After further examinations of files in these three directories, we find the file
 == Provide the _test_ function ==
 
 = Applying Delta Debugging =
+
+== Generate changes ==
+== Backup related source code ==
+== Invoking delta debugging ==
+== Invoking delta debugging with grouping criterion ==
+
+= Explanations =
