@@ -1,6 +1,8 @@
 #labels Featured,Phase-Deploy
 A step-by-step guidance to apply delta debugging to isolate failure-inducing changes of regressions.
 
+= Subjects Preparations =
+
 == Prepare a worked program P, a broken program P' and a test input ==
 
 A user reported a bug of findutils-4.2.18 on Savannah ([http://savannah.gnu.org/bugs/?12181]). The steps to reproduce the failure were also given:
@@ -24,3 +26,7 @@ There were eight directories in the package. Only changes in files of `/src/`, `
 
 After further examinations of files in these three directories, we find the file lists in `/src/` were the same. Moreover, we find the directory
 `/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
+
+== Provide the _test_ function ==
+
+= Applying Delta Debugging =
