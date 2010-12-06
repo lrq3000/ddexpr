@@ -1,4 +1,5 @@
-#A quick guide to use implement.tar.gz
+#labels Featured,Phase-Deploy
+A quick guide to use implement.tar.gz
 
 
 == Download and decompression==
