@@ -2,7 +2,17 @@ A step-by-step guidance to apply delta debugging to isolate failure-inducing cha
 
 = Prepare programs and a test input =
 
-A user reported a bug of findutils-4.2.18 on Savannah ([http://savannah.gnu.org/bugs/?12181]). The steps to reproduce the failure were also given. He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15 and findutils-4.2.18 were used in this experiment.
+A user reported a bug of findutils-4.2.18 on Savannah ([http://savannah.gnu.org/bugs/?12181]). The steps to reproduce the failure were also given:
+{{{
+$ mkdir dir
+$ ln -s dir link
+$ touch dir/file
+$ find -H link
+link
+find: link: Too many levels of symbolic links 
+}}}
+
+He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15 and findutils-4.2.18 were used in this experiment.
 
 
 = Details =
