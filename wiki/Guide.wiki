@@ -22,5 +22,5 @@ There were eight directories in the package. Only changes in files of `/src/`, `
 
 == Check and guarantee configuration consistency between P and P’==
 
-After further examinations of files in these three directories, we find the file lists in ‘/src/’ were the same. Moreover, we find the directory
+After further examinations of files in these three directories, we find the file lists in `/src/` were the same. Moreover, we find the directory
 `/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
