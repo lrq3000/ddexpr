@@ -1,8 +1,8 @@
-#A step-by-step guidance to apply delta debugging.
+A step-by-step guidance to apply delta debugging to isolate failure-inducing changes of regressions.
 
-= Introduction =
+= Prepare programs and a test input =
 
-Add your content here.
+A user reported a bug of findutils-4.2.18 on Savannah. The steps to reproduce the failure were also given. He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15 and findutils-4.2.18 were used in this experiment.
 
 
 = Details =
