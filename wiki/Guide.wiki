@@ -15,9 +15,8 @@ find: link: Too many levels of symbolic links
 He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. Both releases can be downloaded from ftp ([http://ftp.gnu.org/gnu/findutils/]).
 
 
-= Details =
+== Determine relevant files and directories ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+There were nine directories in the package. Only changes in files of ‘/src/’ and ‘/lib/’ were failure-relevant.
+Thus, the number of changed lines to be considered was narrowed down from 11,251 to 4172 ones between
+both entire releases.
