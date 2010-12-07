@@ -75,5 +75,6 @@ After several minutes, the failure-inducing change is identified and stored in a
 
 = Explanations =
 == Background execution (recommended)==
-{{{nohup  python dd.py > log  2>&1 &
+{{{
+nohup  python dd.py > log  2>&1 &
 }}}
