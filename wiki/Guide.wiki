@@ -76,6 +76,16 @@ python hierarchicalDD.py
 After several minutes, the failure-inducing change is identified and stored in a file named `isolated`. With grouping criterion, delta debugging first works on file-level and then turns to change-level.
 
 = Explanations =
+== Configuration settings==
+You can modify configure.txt file in the experiment dir. This file is used to configure the file name about input, output and oracle, and specify the test case command to adapt for other object programs. The format as follows:
+{{{
+Line1: changes.patch(system input)		isolated(system output)
+Line2: oracle_pass(pass output) oracle_fail(fail output)  outputfile(runtime output)
+Line3: project_root_dir  srcdir1 srcdir2 …;srcdir3 …
+*Notes: the source dir before the semicolon will be compiled in order. Another source dir (behind the semicolon) will not be compiled.
+Line4: test case command
+}}}
+
 == Background execution (recommended)==
 {{{
 nohup  python dd.py > log  2>&1 &
