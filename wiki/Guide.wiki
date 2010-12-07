@@ -1,8 +1,9 @@
 #labels Featured,Phase-Deploy
 A step-by-step guidance to apply delta debugging to isolate failure-inducing changes of regressions.
 
+<wiki:toc max_depth="2" />
+
 = Subjects Preparations =
-<wiki:toc max_depth="1" />
 
 == Prepare a worked program P, a broken program P' and a test input ==
 
