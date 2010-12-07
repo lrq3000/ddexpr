@@ -60,6 +60,10 @@ cp -r find find_backup
 }}}
 To apply our prototype, the name of backup dir must be the name of fromDir appended the suffix "`_`backup".
 == Invoking delta debugging ==
+Just type
+{{{
+pythond dd.py
+}}}
 == Invoking delta debugging with grouping criterion ==
 
 = Explanations =
