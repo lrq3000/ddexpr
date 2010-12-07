@@ -51,9 +51,14 @@ Makefile.*
 *.1
 }}}
 
-
-
 == Backup related source code ==
+First, compile the object program and backup related source code:
+{{{
+cd findutils-2.2.15;./configure 
+cd find;make
+cp –r find find_backup
+}}}
+To apply our prototype, the name of backup dir must be the name of fromDir appended the suffix `_backup`.
 == Invoking delta debugging ==
 == Invoking delta debugging with grouping criterion ==
 
