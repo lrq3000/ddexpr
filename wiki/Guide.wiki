@@ -36,10 +36,14 @@ while, when findutils-4.2.15 fails, the output is:
 link
 link/file
 }}}
+Therefore, by comparing outputs, test results can be determined.
 
 = Applying Delta Debugging =
 
 == Generate changes ==
+
+
+
 == Backup related source code ==
 == Invoking delta debugging ==
 == Invoking delta debugging with grouping criterion ==
