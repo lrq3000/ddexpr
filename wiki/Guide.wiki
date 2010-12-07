@@ -18,7 +18,15 @@ He mentioned that the bug was not observed with findutils-4.2.15. Therefore, fin
 
 == Determine relevant files and directories ==
 
-There were eight directories in the package. Only changes in files of `/src/`, `/gnulib/` and `/lib/` were failure-relevant. When findutils-4.2.18 fails, the output is:
+There were eight directories in the package. Only changes in files of `/src/`, `/gnulib/` and `/lib/` were failure-relevant. 
+ 
+== Check and guarantee configuration consistency between P and P’==
+
+After further examinations of files in these three directories, we find the file lists in `/src/` were the same. Moreover, we find the directory
+`/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
+
+== Provide the _test_ function ==
+Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided (*Unsolved*). When findutils-4.2.18 fails, the output is:
 {{{
 link
 find: link: Too many levels of symbolic links 
@@ -28,16 +36,6 @@ while, when findutils-4.2.15 fails, the output is:
 link
 link/file
 }}}
- 
-
-== Check and guarantee configuration consistency between P and P’==
-
-After further examinations of files in these three directories, we find the file lists in `/src/` were the same. Moreover, we find the directory
-`/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
-
-== Provide the _test_ function ==
-Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided
-(*Unsolved*).
 
 = Applying Delta Debugging =
 
