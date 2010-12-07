@@ -28,6 +28,8 @@ After further examinations of files in these three directories, we find the file
 `/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
 
 == Provide the _test_ function ==
+Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided
+(*Unsolved*).
 
 = Applying Delta Debugging =
 
