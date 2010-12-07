@@ -18,12 +18,12 @@ He mentioned that the bug was not observed with findutils-4.2.15. Therefore, fin
 
 == Determine relevant files and directories ==
 
-There were eight directories in the package. Only changes in files of `/src/`, `/gnulib/` and `/lib/` were failure-relevant. 
+There were eight directories in the package. Only changes in files of `/find/`, `/gnulib/` and `/lib/` were failure-relevant. 
  
 == Check and guarantee configuration consistency between P and P’==
 
-After further examinations of files in these three directories, we find the file lists in `/src/` were the same. Moreover, we find the directory
-`/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/src/`.
+After further examinations of files in these three directories, we find the file lists in `/find/` were the same. Moreover, we find the directory
+`/gnulib/` and `/lib/` of findutils-4.2.18 could also be used in findutils-4.2.15 and did not affect the output. Therefore, we just need to focus on changes in `/find/`.
 
 == Provide the _test_ function ==
 Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided (*Unsolved*). When findutils-4.2.18 fails, the output is:
@@ -41,6 +41,15 @@ Therefore, by comparing outputs, test results can be determined.
 = Applying Delta Debugging =
 
 == Generate changes ==
+Generate changes between directories `/find/` of findutils-4.2.15(P) and findutils-4.2.18(P'):
+{{{
+diff –NbU 0 --exclude-from=patterns.xo findutils-4.2.15/find findutils-4.2.18/find  >> changes.patch
+}}}
+Here `patterns.xo` is a file including some patterns to ignore some files or subdirectories whose base names match these patterns. In this example, the context as follows:
+{{{
+Makefile.*
+*.1
+}}}
 
 
 
