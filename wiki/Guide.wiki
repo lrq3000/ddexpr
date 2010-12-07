@@ -60,10 +60,20 @@ cp -r find find_backup
 }}}
 To apply our prototype, the name of backup dir must be the name of fromDir appended the suffix "`_`backup".
 == Invoking delta debugging ==
-Just type
+Go to directory 'find/experiments' and just type:
 {{{
-pythond dd.py
+python dd.py
 }}}
+After several minutes, the failure-inducing change is identified and stored in a file named `isolated`.
+
 == Invoking delta debugging with grouping criterion ==
+Go to directory 'find/experiments' and just type:
+{{{
+python hierarchicalDD.py
+}}}
+After several minutes, the failure-inducing change is identified and stored in a file named `isolated`.
 
 = Explanations =
+== Background execution (recommended)==
+{{{nohup  python dd.py > log  2>&1 &
+}}}
