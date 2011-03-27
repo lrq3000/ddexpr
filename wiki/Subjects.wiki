@@ -1,7 +1,7 @@
 #labels Featured
 An introduction of subjects used in this study.
 
-|| *Program* || *Ver(P)* || *Ver(P)* || *Description* || *Report* ||
+|| *Program* || *Ver(P)* || *Ver(P')* || *Description* || *Report* ||
 ||bash||3.2.48||4.0||Parsing error||[http://lists.gnu.org/archive/html/bug-bash/2009-03/msg00018.html]||
 ||bc||1.05a||1.06||Argument processing error||[http://bugs.gentoo.org/show_bug.cgi?id=51525]||
 ||cpio||2.8||2.9||Wrong file owner uid set||[http://lists.gnu.org/archive/html/bug-cpio/2007-10/msg00001.html]||
