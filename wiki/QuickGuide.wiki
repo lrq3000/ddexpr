@@ -6,15 +6,9 @@
 Download [http://ddexpr.googlecode.com/files/prototype.tar.gz prototype.tar.gz] and 
 decompress it:
 
-<code language="xml">
 {{{
 tar zxvf prototype.tar.gz
 }}}
-</code>
-
-<code language="xml">
-<hello target="world"/>
-</code>
 
 == Automated Preparation==
 Go to directory 'script/' and just type:
