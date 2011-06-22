@@ -17,6 +17,13 @@ python run.py find-a
 }}}
 After about twenty minutes, the guilty commit is identified and stored in directory 'output/' as a file named `badCommit_find-a.txt`.
 
+== Isolate Failure-inducing Changes by Delta Debugging==
+Go to directory 'find/experiments' and just type:
+{{{
+python dd.py find-a
+}}}
+After about twenty minutes, the failure-inducing changes are identified and stored in directory 'output/' as a file named `badCommit_find-a.txt`.
+
 = A Quick Guide to Use implement.tar.gz =
 
 
