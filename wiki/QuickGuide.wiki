@@ -2,7 +2,7 @@
 <wiki:toc max_depth="1" />
 
 
-= A quick guide to use implement.tar.gz =
+= A Quick Guide to Use implement.tar.gz =
 
 
 == Download and decompression==
