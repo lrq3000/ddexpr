@@ -1,6 +1,14 @@
 #labels Featured,Phase-Deploy
 <wiki:toc max_depth="1" />
 
+= A Quick Guide to Use prototype.tar.gz =
+== Download and Decompression==
+Download [http://ddexpr.googlecode.com/files/prototype.tar.gz implement.tar.gz] and 
+decompress it:
+
+{{{
+tar zxvf prototype.tar.gz
+}}}
 
 = A Quick Guide to Use implement.tar.gz =
 
