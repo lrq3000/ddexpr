@@ -1,5 +1,5 @@
+#summary An Introduction of Subjects Used in This Study.
 #labels Featured
-An introduction of subjects used in this study.
 
 || *Program* || *Ver(P)* || *Ver(P')* || *Description* || *Report* ||
 ||bash||3.2.48||4.0||Parsing error||[http://lists.gnu.org/archive/html/bug-bash/2009-03/msg00018.html]||
