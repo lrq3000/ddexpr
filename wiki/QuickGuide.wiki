@@ -3,12 +3,20 @@
 
 = A Quick Guide to Use prototype.tar.gz =
 == Download and Decompression==
-Download [http://ddexpr.googlecode.com/files/prototype.tar.gz implement.tar.gz] and 
+Download [http://ddexpr.googlecode.com/files/prototype.tar.gz prototype.tar.gz] and 
 decompress it:
 
 {{{
 tar zxvf prototype.tar.gz
 }}}
+
+== Automated Preparation==
+Suppose we want to automatically select adjacent versions for find(a).
+Go to directory 'scirpt/experiments' and just type:
+{{{
+python dd.py
+}}}
+After several minutes, the failure-inducing change is identified and stored in a file named `isolated`.
 
 = A Quick Guide to Use implement.tar.gz =
 
