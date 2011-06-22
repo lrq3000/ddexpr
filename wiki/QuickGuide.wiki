@@ -11,12 +11,11 @@ tar zxvf prototype.tar.gz
 }}}
 
 == Automated Preparation==
-Suppose we want to automatically select adjacent versions for find(a).
-Go to directory 'scirpt/experiments' and just type:
+Go to directory 'scirpt/' and just type:
 {{{
-python dd.py
+python run.py find-a
 }}}
-After several minutes, the failure-inducing change is identified and stored in a file named `isolated`.
+After about twenty minutes, the guilty commit is identified and stored in directory 'output/' as a file named `badCommit_find-a.txt`.
 
 = A Quick Guide to Use implement.tar.gz =
 
