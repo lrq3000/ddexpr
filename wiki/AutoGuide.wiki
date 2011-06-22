@@ -1,6 +1,5 @@
-#summary One-sentence summary of this page.
+#summary A Guide to Use Our Prototype.
 #labels Featured,Phase-Deploy
-A Guide to Use Our Prototype
 
 = Introduction =
 
