@@ -22,7 +22,7 @@ Go to directory 'script' and just type:
 {{{
 python dd.py find-a
 }}}
-After about eighty minutes, the failure-inducing changes are identified and stored in directory 'result/' as a file named `isolated_find-a.txt`.
+After about eighty minutes, the failure-inducing changes are identified and stored in directory 'result/' as a file named `isolated_find-a`.
 
 = A Quick Guide to Use implement.tar.gz =
 
