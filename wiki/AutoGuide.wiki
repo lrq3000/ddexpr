@@ -29,8 +29,9 @@ Specifically, we created two files named "find-a_pass" and "find-a_fail" under t
 
 The script used to determine test results is named "test_find-a.sh" under the directory "/script/":
 
-<code language="bash">
+
 {{{
+<code language="bash">
 #!/bin/sh dir oracle_fail oracle_pass program
 
 cd ..
@@ -57,8 +58,9 @@ else
 fi
 
 echo $status
-}}}
 </code>
+}}}
+
 
 
 
