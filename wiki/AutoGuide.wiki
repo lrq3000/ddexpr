@@ -4,12 +4,12 @@
 = Preliminaries =
 
 A user reported a bug of findutils-4.2.18 on [http://savannah.gnu.org/bugs/?12181 Savannah]. The steps to reproduce the failure were also given:
-<code language="bash">
+{{{
 $ mkdir dir
 $ ln -s dir link
 $ touch dir/file
 $ find -H link
-</code>
+}}}
 
 He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. The git repository is available at [http://git.savannah.gnu.org/cgit/findutils.git].
 
