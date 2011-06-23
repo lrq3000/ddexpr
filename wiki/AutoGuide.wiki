@@ -15,7 +15,17 @@ He mentioned that the bug was not observed with findutils-4.2.15. Therefore, fin
 
 = Construction of _test_ Functions =
 
-Add your content here.
+Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided (*Unsolved*). When findutils-4.2.18 fails, the output is:
+{{{
+link
+find: link: Too many levels of symbolic links 
+}}}
+while, when findutils-4.2.15 fails, the output is:
+{{{
+link
+link/file
+}}}
+Therefore, by comparing outputs, test results can be determined.
 
 
 = Details =
