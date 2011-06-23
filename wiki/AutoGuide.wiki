@@ -60,6 +60,8 @@ echo $status
 </code>
 
 = Prepare of Versions =
+To apply our prototype, both the names of a worked and a broken
+commit object should be specified in the file named configure
 
 
 
