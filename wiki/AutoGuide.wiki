@@ -4,7 +4,7 @@
 = Preliminaries =
 
 A user reported a bug of findutils-4.2.18 on [http://savannah.gnu.org/bugs/?12181 Savannah]. The steps to reproduce the failure were also given:
-<code language="io">
+<code language="bash">
 $ mkdir dir
 $ ln -s dir link
 $ touch dir/file
