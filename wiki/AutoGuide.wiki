@@ -29,6 +29,37 @@ Specifically, we created two files named "find-a_pass" and "find-a_fail" under t
 
 The script used to determine test results is named "test_find-a.sh" under the directory "/script/":
 
+{{{
+#!/bin/sh dir oracle_fail oracle_pass program
+
+cd ..
+home=$(pwd)
+output=$home/output/
+dir=$home/$1/
+program=$4
+cd $dir
+mkdir dir
+ln -s dir link
+touch dir/file
+./find/find -H link >output_file 2>output_file_err
+
+if cmp output_file_err ../oracle/$2 1> /dev/null 2>> $output/compileLog_$program.txt
+then 
+    status=0
+else
+    if cmp output_file ../oracle/$3 1> /dev/null 2>> $output/compileLog_$program.txt
+    then 
+        status=1
+    else 
+        status=125
+    fi
+fi
+
+echo $status
+}}}
+
+
+
 
 = Details =
 
