@@ -27,6 +27,8 @@ link/file
 Therefore, by comparing outputs, test results can be determined.
 Specifically, we created two files named "find-a_pass" and "find-a_fail" under the directory "/oracle/".
 
+The script used to determine test results is named "test_find-a.sh" under the directory "/script/":
+
 
 = Details =
 
