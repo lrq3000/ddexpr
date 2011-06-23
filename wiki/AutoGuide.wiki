@@ -11,7 +11,7 @@ $ touch dir/file
 $ find -H link
 }}}
 
-He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. The git commit  from ftp ([http://ftp.gnu.org/gnu/findutils/]).
+He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. The git repository is available at ([http://git.savannah.gnu.org/cgit/findutils.git]).
 
 = Construction of _test_ Functions =
 
