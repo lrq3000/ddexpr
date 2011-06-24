@@ -1,6 +1,8 @@
 #summary A Guide to Use Our Prototype.
 #labels Featured,Phase-Deploy
 
+<wiki:toc max_depth="2" />
+
 = Preliminaries =
 
 A user reported a bug of findutils-4.2.18 on [http://savannah.gnu.org/bugs/?12181 Savannah]. The steps to reproduce the failure were also given:
