@@ -15,6 +15,12 @@ $ find -H link
 
 He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. The git repository is available at [http://git.savannah.gnu.org/cgit/findutils.git].
 
+== Getting a Copy of the Git Repository ==
+Checkout the Git Repository by type:
+{{{
+git clone git://git.savannah.gnu.org/findutils.git
+}}}
+
 == A Way of Building Programs Automatically ==
 To apply delta debugging, a way of building program automatically. Specifically, a script named `compiler_find-a.sh` is provided under the directory `/script/`:
 
