@@ -14,6 +14,29 @@ $ find -H link
 He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. The git repository is available at [http://git.savannah.gnu.org/cgit/findutils.git].
 
 = A Way of Building Programs Automatically =
+To apply delta debugging, a way of building program automatically. Specifically, a script named "compiler_find-a.sh" is provided under the directory "/script/":
+
+<code language="bash">
+#./compiler_find-a.sh dir program
+#!/bin/bash
+cd ..
+home=$(pwd)
+echo $home
+script=$home/script
+output=$home/output
+dir=$home/$1
+program=$2
+cd $dir
+cp ../prepare/cp_find-a.sh ./
+sh ./cp_find-a.sh
+echo "start compile"
+echo "configure ..."
+./configure --prefix=$dir 1> /dev/null 2>> $output/compileLog_$program.txt
+echo "make ..."
+make 1> /dev/null 2>> $output/compileLog_$program.txt
+echo "compile end"
+cd $script
+</code>
 
 = Construction of _test_ Functions =
 
