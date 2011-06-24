@@ -19,6 +19,7 @@ To apply delta debugging, a way of building program automatically. Specifically,
 <code language="bash">
 #./compiler_find-a.sh dir program
 #!/bin/bash
+
 cd ..
 home=$(pwd)
 echo $home
