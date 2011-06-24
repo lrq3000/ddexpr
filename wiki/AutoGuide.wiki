@@ -94,7 +94,7 @@ fi
 echo $status
 </code>
 
-Note that the script in the above example output code 0 if the current test result is (*Pass*), and output code between 1 and 127 (inclusive), except 125, if the current source code is bad.
+Note that the script in the above example output code 0 if the current test result is (*Fail*), and output code 1 if the current test result is (*Pass*), otherwise, 125 is outpur if the current test result is (*Unresolved*).
 
 == Preparation of Versions ==
 To apply our prototype, both the names of a worked and a broken
