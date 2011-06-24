@@ -106,6 +106,8 @@ commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in 
 </root>
 }}}
 
+= Invoking ‘git bisect’ =
+
 
 
 
