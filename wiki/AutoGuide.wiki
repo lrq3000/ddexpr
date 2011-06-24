@@ -59,7 +59,7 @@ fi
 echo $status
 </code>
 
-= Prepare of Versions =
+= Preparation of Versions =
 To apply our prototype, both the names of a worked and a broken
 commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in the file named "configure.xml" under the directory of "/script/":
 
