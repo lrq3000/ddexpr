@@ -107,35 +107,10 @@ commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in 
 }}}
 
 = Invoking `git bisect` =
-We provide a python file named `run.py` under `/script/` to invoke `git bisect` to find the commit that introduced the regression:
-
-<code language="python">
-'''
-usage example: python run.py grep-a
-'''
-import configure
-import os
-import sys
-
-if __name__ == '__main__':
-    if len(sys.argv)!=2:
-        print "arguments error!"
-        print "usage: run.py program"
-        sys.exit()
-    program = sys.argv[1]
-    configure.parser("configure.xml")
-    bak_dir = configure.getBakDir(program)
-    dir = configure.getDir(program)
-    bad_version = configure.getBadVersion(program)
-    good_version = configure.getGoodVersion(program)
-    oracle_fail = configure.getOracleFail(program)
-    oracle_pass = configure.getOraclePass(program)
-
-    os.system("bash ./bisect.sh "+program+" "+bak_dir+" "+dir+" "+bad_version+" "+good_version+" "+oracle_fail+" "+oracle_pass)
-
-
-</code>
-
+We provide a python file named `run.py` under `/script/` to invoke `git bisect` to find the commit that introduced the regression by just type:
+{{{
+python run.py program
+}}}
 
 
 
