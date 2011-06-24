@@ -53,9 +53,9 @@ link
 link/file
 }}}
 Therefore, by comparing outputs, test results can be determined.
-Specifically, we created two files named "find-a_pass" and "find-a_fail" under the directory "/oracle/".
+Specifically, we created two files named `find-a_pass` and `find-a_fail` under the directory `/oracle/`.
 
-The script used to determine test results is named "test_find-a.sh" under the directory "/script/":
+The script used to determine test results is named `test_find-a.sh` under the directory `/script/`:
 
 
 <code language="bash">
@@ -89,7 +89,7 @@ echo $status
 
 == Preparation of Versions ==
 To apply our prototype, both the names of a worked and a broken
-commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in the file named "configure.xml" under the directory of "/script/":
+commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in the file named `configure.xml` under the directory of `/script/`:
 
 {{{
 <?xml version="1.0" ?>
