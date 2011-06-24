@@ -20,6 +20,7 @@ Checkout the Git Repository by type:
 {{{
 git clone git://git.savannah.gnu.org/findutils.git
 }}}
+After that, renamed the repository as `bak_findutils` for future use.
 
 == A Way of Building Programs Automatically ==
 To apply delta debugging, a way of building program automatically. Specifically, a script named `compiler_find-a.sh` is provided under the directory `/script/`:
