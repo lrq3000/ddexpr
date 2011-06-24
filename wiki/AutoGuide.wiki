@@ -94,6 +94,8 @@ fi
 echo $status
 </code>
 
+Note that the script in the above example output code 0 if the current test result is (*Pass*), and output code between 1 and 127 (inclusive), except 125, if the current source code is bad.
+
 == Preparation of Versions ==
 To apply our prototype, both the names of a worked and a broken
 commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in the file named `configure.xml` under the directory of `/script/`:
