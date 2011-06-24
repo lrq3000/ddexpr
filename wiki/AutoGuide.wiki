@@ -108,9 +108,9 @@ commit object (FINDUTILS_4_2_18-1 and FINDUTILS_4_2_15-1)should be specified in 
 
 = Invoking `git bisect` =
 We provide a python file named `run.py` under `/script/` to invoke `git bisect` to find the commit that introduced the regression by just type:
-<code language="bash">
+{{{
 python run.py program
-</code>
+}}}
 
 
 
