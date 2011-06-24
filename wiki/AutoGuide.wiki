@@ -31,14 +31,9 @@ To apply delta debugging, a way of building program automatically. Specifically,
 
 cd ..
 home=$(pwd)
-echo $home
-script=$home/script
-output=$home/output
 dir=$home/$1
 program=$2
-cd $dir
-cp ../prepare/cp_find-a.sh ./
-sh ./cp_find-a.sh
+...
 echo "start compile"
 echo "configure ..."
 ./configure --prefix=$dir 1> /dev/null 2>> $output/compileLog_$program.txt
