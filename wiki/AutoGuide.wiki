@@ -128,11 +128,3 @@ Go to directory `/script/` and just type:
 python dd.py find-a
 }}}
 After about eighty minutes, the failure-inducing changes are identified and stored in directory `/result/` as a file named `isolated_find-a`.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
