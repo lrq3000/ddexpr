@@ -61,7 +61,23 @@ echo $status
 
 = Prepare of Versions =
 To apply our prototype, both the names of a worked and a broken
-commit object should be specified in the file named configure
+commit object should be specified in the file named "configure.xml" under the directory of "/script/":
+
+<code language="xml">
+<?xml version="1.0" ?>
+<root>
+    <find-a>
+        <bak_dir>bak_findutils</bak_dir>
+        <dir>findutils</dir>
+        <bad_version>FINDUTILS_4_2_18-1</bad_version>
+        <good_version>FINDUTILS_4_2_15-1</good_version>
+        <oracle_fail>find-a_fail</oracle_fail>
+        <oracle_pass>find-a_pass</oracle_pass>
+        <exe>/find/find</exe>
+    </find-a>
+</root>
+</code>
+
 
 
 
