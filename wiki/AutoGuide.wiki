@@ -20,10 +20,10 @@ Delta debugging requires a _test_ function to check whether the failure occurs (
 ./find/find: link: Too many levels of symbolic links
 }}}
 while, when findutils-4.2.15 fails, the output is:
-{{{
+<code language="text">
 link
 link/file
-}}}
+</code>
 Therefore, by comparing outputs, test results can be determined.
 Specifically, we created two files named "find-a_pass" and "find-a_fail" under the directory "/oracle/".
 
