@@ -50,11 +50,11 @@ cd $script
 
 == Construction of _test_ Functions ==
 
-Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided (*Unsolved*). When findutils-4.2.18 fails, the output is:
+Delta debugging requires a _test_ function to check whether the failure occurs (*Fail*) or not (*Pass*) or whether the result is undecided (*Unresolved*). When findutils-4.2.18 fails, the _error output_ is:
 {{{
 ./find/find: link: Too many levels of symbolic links
 }}}
-while, when findutils-4.2.15 fails, the output is:
+while, when findutils-4.2.15 fails, the _standt output_ is:
 {{{
 link
 link/file
