@@ -120,7 +120,7 @@ We provide a python file named `run.py` under `/script/` to invoke `git bisect` 
 {{{
 python run.py find-a
 }}}
-After about twenty minutes, the guilty commit is identified and stored in directory 'output/' as a file named badCommit_find-a.txt, and the initial searching area for delta debugging is stored in directory 'result/' as a file named patch_find-a. 
+After about twenty minutes, the guilty commit is identified and stored in directory `/output/` as a file named `badCommit_find-a.txt`, and the initial searching area for delta debugging is stored in directory `/result/` as a file named `patch_find-a`. 
 
 
 
