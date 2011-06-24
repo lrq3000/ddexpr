@@ -63,7 +63,7 @@ echo $status
 To apply our prototype, both the names of a worked and a broken
 commit object should be specified in the file named "configure.xml" under the directory of "/script/":
 
-{{{
+<code language="xml">
 <?xml version="1.0" ?>
 <root>
     <find-a>
@@ -76,7 +76,7 @@ commit object should be specified in the file named "configure.xml" under the di
         <exe>/find/find</exe>
     </find-a>
 </root>
-}}}
+</code>
 
 
 
