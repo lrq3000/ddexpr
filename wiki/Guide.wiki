@@ -1,4 +1,4 @@
-#summary A Step-by-step Guidance to Apply Delta Debugging to Isolate Failure-inducing Changes of Regressions Manually.
+#summary A Guidance to Apply Delta Debugging to Isolate Failure-inducing Changes of Regressions.
 #labels Featured,Phase-Deploy
 
 <wiki:toc max_depth="2" />
