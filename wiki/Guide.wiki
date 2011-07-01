@@ -71,7 +71,7 @@ After several minutes, the failure-inducing change is identified and stored in a
 == Invoking delta debugging with grouping criterion ==
 Go to directory 'find/experiments' and just type:
 {{{
-python hierarchicalDD.py
+python hdd.py
 }}}
 After several minutes, the failure-inducing change is identified and stored in a file named `isolated`. With grouping criterion, delta debugging first works on file-level and then turns to change-level.
 
