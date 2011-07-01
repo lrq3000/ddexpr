@@ -1,4 +1,4 @@
-#summary A Guide to Use Our Prototype.
+#summary A Guide to Use Our Prototype (prototype.tar.gz).
 #labels Featured,Phase-Deploy
 
 <wiki:toc max_depth="2" />
