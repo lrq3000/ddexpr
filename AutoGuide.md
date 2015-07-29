@@ -1,0 +1,124 @@
+
+
+# Preliminaries #
+
+A user reported a bug of findutils-4.2.18 on [Savannah](http://savannah.gnu.org/bugs/?12181). The steps to reproduce the failure were also given:
+```
+$ mkdir dir
+$ ln -s dir link
+$ touch dir/file
+$ find -H link
+```
+
+He mentioned that the bug was not observed with findutils-4.2.15. Therefore, findutils-4.2.15(P) and findutils-4.2.18(P') were used in this experiment. The git repository is available at http://git.savannah.gnu.org/cgit/findutils.git.
+
+## Getting a Copy of the Git Repository ##
+Checkout the Git Repository by type:
+```
+git clone git://git.savannah.gnu.org/findutils.git
+```
+After that, renamed the repository as `bak_findutils` for future use.
+
+## A Way of Building Programs Automatically ##
+To apply delta debugging, a way of building program automatically. Specifically, a script named `compiler_find-a.sh` is provided under the directory `/script/`:
+
+```bash
+
+#./compiler_find-a.sh dir program
+#!/bin/bash
+
+cd ..
+home=$(pwd)
+dir=$home/$1
+program=$2
+...
+echo "start compile"
+echo "configure ..."
+./configure --prefix=$dir 1> /dev/null 2>> $output/compileLog_$program.txt
+echo "make ..."
+make 1> /dev/null 2>> $output/compileLog_$program.txt
+echo "compile end"
+cd $script
+```
+
+## Construction of _test_ Functions ##
+
+Delta debugging requires a _test_ function to check whether the failure occurs (**Fail**) or not (**Pass**) or whether the result is undecided (**Unresolved**). When findutils-4.2.18 fails, the _standard error_ is:
+```
+./find/find: link: Too many levels of symbolic links
+```
+while, when findutils-4.2.15 fails, the _standard output_ is:
+```
+link
+link/file
+```
+Therefore, by comparing outputs, test results can be determined.
+Specifically, we created two files named `find-a_pass` and `find-a_fail` under the directory `/oracle/`.
+
+The script used to determine test results is named `test_find-a.sh` under the directory `/script/`:
+
+
+```bash
+
+#!/bin/sh dir oracle_fail oracle_pass program
+
+cd ..
+home=$(pwd)
+output=$home/output/
+dir=$home/$1/
+program=$4
+cd $dir
+mkdir dir
+ln -s dir link
+touch dir/file
+./find/find -H link >output_file 2>output_file_err
+
+if cmp output_file_err ../oracle/$2 1> /dev/null 2>> $output/compileLog_$program.txt
+then
+status=0
+else
+if cmp output_file ../oracle/$3 1> /dev/null 2>> $output/compileLog_$program.txt
+then
+status=1
+else
+status=125
+fi
+fi
+
+echo $status
+```
+
+Note that the script in the above example output code 0 if the current test result is (**Fail**), and output code 1 if the current test result is (**Pass**), otherwise, 125 is outpur if the current test result is (**Unresolved**).
+
+## Preparation of Versions ##
+To apply our prototype, both the names of a worked and a broken
+commit object (FINDUTILS\_4\_2\_18-1 and FINDUTILS\_4\_2\_15-1)should be specified in the file named `configure.xml` under the directory of `/script/`:
+
+```
+<?xml version="1.0" ?>
+<root>
+    <find-a>
+        <bak_dir>bak_findutils</bak_dir>
+        <dir>findutils</dir>
+        <bad_version>FINDUTILS_4_2_18-1</bad_version>
+        <good_version>FINDUTILS_4_2_15-1</good_version>
+        <oracle_fail>find-a_fail</oracle_fail>
+        <oracle_pass>find-a_pass</oracle_pass>
+        <exe>/find/find</exe>
+    </find-a>
+</root>
+```
+
+# Invoking `git bisect` #
+We provide a python file named `run.py` under `/script/` to invoke `git bisect` to find the commit that introduced the regression by just type:
+```
+python run.py find-a
+```
+After about twenty minutes, the guilty commit is identified and stored in directory `/output/` as a file named `badCommit_find-a.txt`, and the initial searching area for delta debugging is stored in directory `/result/` as a file named `patch_find-a`.
+
+# Isolate Failure-inducing Changes by Delta Debugging #
+Go to directory `/script/` and just type:
+```
+python dd.py find-a
+```
+After about eighty minutes, the failure-inducing changes are identified and stored in directory `/result/` as a file named `isolated_find-a`.

@@ -1,0 +1,49 @@
+
+
+# A Quick Guide to Use prototype.tar.gz #
+## Download and Decompression ##
+Download [prototype.tar.gz](http://ddexpr.googlecode.com/files/prototype.tar.gz) and
+decompress it:
+
+```
+tar zxvf prototype.tar.gz
+```
+
+## Automated Preparation ##
+Go to directory `/script/` and just type:
+```
+python run.py find-a
+```
+After about twenty minutes, the guilty commit is identified and stored in directory `/output/` as a file named `badCommit_find-a.txt`, and the initial searching area for delta debugging is stored in directory `/result/` as a file named `patch_find-a`.
+
+## Isolate Failure-inducing Changes by Delta Debugging ##
+Go to directory `/script/` and just type:
+```
+python dd.py find-a
+```
+After about eighty minutes, the failure-inducing changes are identified and stored in directory `/result/` as a file named `isolated_find-a`.
+
+# A Quick Guide to Use implement.tar.gz #
+
+
+## Download and Decompression ##
+Download [implement.tar.gz](http://ddexpr.googlecode.com/files/implement.tar.gz) and
+decompress it:
+
+```
+tar zxvf implement.tar.gz
+```
+
+## Isolate Failure-inducing Changes by Delta Debugging ##
+Go to directory `/find/experiments` and just type:
+```
+python dd.py
+```
+After several minutes, the failure-inducing change is identified and stored in a file named `isolated`.
+
+## Isolate Failure-inducing Changes by Hierarchical Delta Debugging ##
+Go to directory `/find/experiments` and just type:
+```
+python hdd.py
+```
+After several minutes, the failure-inducing change is identified and stored in a file named `isolated_h`.
